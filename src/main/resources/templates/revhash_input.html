@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head> 
+    <title>Hash Encrypter Decrypter</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Hash Encrypter / Decrypter</h1>
+    <form action="#" th:action="@{/}" th:object="${revhash}" method="post">
+        <input type="radio" id="encrypt" name="direction" value="encrypt" checked="checked">
+        <label for="encrypt">Encrypt</label><br>
+        <input type="radio" id="decrypt" name="direction" value="decrypt">
+        <label for="decrypt">Decrypt</label><br>
+    	<p>Hash:                      <input type="text" size = "50" th:field="*{hash}" /></p>
+        <p>Password (for decryption): <input type="text" size = "50" th:field="*{password}" /></p>
+        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    </form>
+</body>
+</html>

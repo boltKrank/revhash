@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head> 
+    <title>Hash Encrypter Decrypter</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Results</h1>
+    <div th:if="${revhash.isEncrypt()}">
+        <p th:text="'Encrypted Hash: ' + ${revhash.hash}" />
+        <p th:text="'Password: ' + ${revhash.password}" />  
+    </div>
+
+    <div th:if="${revhash.isDecrypt()}">
+        <p th:text="'Decrypted Hash: ' + ${revhash.hash}" />
+    </div>
+
+    <a href="/revhash">Return to begining</a>
+</body>
+</html>
